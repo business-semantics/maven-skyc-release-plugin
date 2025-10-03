@@ -280,6 +280,11 @@ public abstract class AbstractRewritePomsPhase extends AbstractReleasePhase impl
         Model model = project.getModel();
 
         Properties properties = modelTarget.getProperties();
+        if(properties == null)
+        {
+            properties = new Properties();
+            modelTarget.setProperties(properties);
+        }
 
         String parentVersion = rewriteParent(project, modelTarget, result, releaseDescriptor, simulate);
 
@@ -453,6 +458,18 @@ public abstract class AbstractRewritePomsPhase extends AbstractReleasePhase impl
         }
 
         modelTarget.setVersion(version);
+
+        Properties properties = modelTarget.getProperties();
+        if (properties != null) {
+            if (properties.getProperty("revision") != null) {
+                properties.setProperty("revision", version);
+            }
+
+            ReleaseResult releaseResult = new ReleaseResult();
+            releaseResult.setResultCode(ReleaseResult.SUCCESS);
+
+            logInfo(releaseResult, "Revision property value: " + properties.getProperty("revision"));
+        }
     }
 
     /**
