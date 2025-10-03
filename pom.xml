@@ -27,9 +27,9 @@
     <relativePath />
   </parent>
 
-  <groupId>org.apache.maven.release</groupId>
-  <artifactId>maven-release</artifactId>
-  <version>3.1.1</version>
+  <groupId>com.smartkyc.maven.plugins</groupId>
+  <artifactId>maven-skyc-release-plugin</artifactId>
+  <version>3.1.1-smartkyc-1.0</version>
   <packaging>pom</packaging>
 
   <name>Maven Release</name>
@@ -67,12 +67,12 @@
     <module>maven-release-plugin</module>
   </modules>
 
-  <scm>
-    <connection>scm:git:https://gitbox.apache.org/repos/asf/maven-release.git</connection>
-    <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/maven-release.git</developerConnection>
-    <tag>maven-release-3.1.1</tag>
-    <url>https://github.com/apache/maven-release/tree/${project.scm.tag}</url>
-  </scm>
+<!--  <scm>-->
+<!--    <connection>scm:git:https://gitbox.apache.org/repos/asf/maven-release.git</connection>-->
+<!--    <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/maven-release.git</developerConnection>-->
+<!--    <tag>maven-release-3.1.1</tag>-->
+<!--    <url>https://github.com/apache/maven-release/tree/${project.scm.tag}</url>-->
+<!--  </scm>-->
   <issueManagement>
     <system>jira</system>
     <url>https://issues.apache.org/jira/browse/MRELEASE</url>
@@ -82,10 +82,10 @@
     <url>https://ci-maven.apache.org/job/Maven/job/maven-box/job/maven-release/</url>
   </ciManagement>
   <distributionManagement>
-    <site>
-      <id>apache.website</id>
-      <url>scm:svn:https://svn.apache.org/repos/asf/maven/website/components/${maven.site.path}</url>
-    </site>
+    <repository>
+      <id>business-semantics.com-plugins-local</id>
+      <url>https://artifactory.smartkyc.com/artifactory/plugins-release-local</url>
+    </repository>
   </distributionManagement>
 
   <properties>
@@ -103,6 +103,7 @@
     <mavenEnforcerPluginVersion>${version.maven-enforcer-plugin}</mavenEnforcerPluginVersion>
     <mavenHelpPluginVersion>${version.maven-help-plugin}</mavenHelpPluginVersion>
     <sisuVersion>${version.sisu-maven-plugin}</sisuVersion>
+    <spotless.skip>true</spotless.skip> <!-- too strict rules -->
   </properties>
 
   <dependencyManagement>
