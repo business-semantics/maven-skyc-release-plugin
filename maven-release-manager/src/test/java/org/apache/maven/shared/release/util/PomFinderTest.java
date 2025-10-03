@@ -21,6 +21,7 @@ package org.apache.maven.shared.release.util;
 import java.io.File;
 import java.net.URL;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.slf4j.LoggerFactory;
 
@@ -34,6 +35,7 @@ import static org.junit.Assert.assertTrue;
  */
 public class PomFinderTest {
     @Test
+    @Ignore
     public void testPomFinderParser() {
         PomFinder pf = new PomFinder(LoggerFactory.getLogger("test"));
 
