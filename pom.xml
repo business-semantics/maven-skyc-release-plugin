@@ -67,26 +67,16 @@
     <module>maven-release-plugin</module>
   </modules>
 
-<!--  <scm>-->
-<!--    <connection>scm:git:https://gitbox.apache.org/repos/asf/maven-release.git</connection>-->
-<!--    <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/maven-release.git</developerConnection>-->
-<!--    <tag>maven-release-3.1.1</tag>-->
-<!--    <url>https://github.com/apache/maven-release/tree/${project.scm.tag}</url>-->
-<!--  </scm>-->
-  <issueManagement>
-    <system>jira</system>
-    <url>https://issues.apache.org/jira/browse/MRELEASE</url>
-  </issueManagement>
-  <ciManagement>
-    <system>Jenkins</system>
-    <url>https://ci-maven.apache.org/job/Maven/job/maven-box/job/maven-release/</url>
-  </ciManagement>
-  <distributionManagement>
-    <repository>
-      <id>business-semantics.com-plugins-local</id>
-      <url>https://artifactory.smartkyc.com/artifactory/plugins-release-local</url>
-    </repository>
-  </distributionManagement>
+	<distributionManagement>
+		<repository>
+			<id>plugins-release-local</id>
+			<url>https://artifactory.smartkyc.com/artifactory/plugins-release-local</url>
+		</repository>
+		<snapshotRepository>
+			<id>plugins-snapshot-local</id>
+			<url>https://artifactory.smartkyc.com/artifactory/plugins-snapshot-local</url>
+		</snapshotRepository>
+	</distributionManagement>
 
   <properties>
     <scmVersion>2.1.0</scmVersion>
