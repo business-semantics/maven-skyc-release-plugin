@@ -42,12 +42,12 @@
             <artifactId>maven-scm-provider-dummy</artifactId>
             <version>1.0</version>
           </dependency>
-          <dependency>
-            <groupId>org.apache.maven.release</groupId>
-            <artifactId>maven-release-semver-policy</artifactId>
-            <version>@project.version@</version>
-          </dependency>
-        </dependencies>
+			<dependency>
+				<groupId>com.smartkyc.maven.plugins</groupId>
+				<artifactId>maven-release-semver-policy</artifactId>
+				<version>@project.version@</version>
+			</dependency>
+		</dependencies>
       </plugin>
     </plugins>
   </build>

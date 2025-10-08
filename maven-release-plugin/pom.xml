@@ -39,12 +39,12 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.apache.maven.release</groupId>
+		<groupId>com.smartkyc.maven.plugins</groupId>
       <artifactId>maven-release-api</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.apache.maven.release</groupId>
+	  <groupId>com.smartkyc.maven.plugins</groupId>
       <artifactId>maven-release-manager</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -83,17 +83,17 @@
 
     <!-- verified with ITs -->
     <dependency>
-      <groupId>org.apache.maven.release</groupId>
+	  <groupId>com.smartkyc.maven.plugins</groupId>
       <artifactId>maven-release-oddeven-policy</artifactId>
       <version>${project.version}</version>
       <optional>true</optional>
     </dependency>
-    <dependency>
-      <groupId>org.apache.maven.release</groupId>
-      <artifactId>maven-release-semver-policy</artifactId>
-      <version>${project.version}</version>
-      <optional>true</optional>
-    </dependency>
+	  <dependency>
+		  <groupId>com.smartkyc.maven.plugins</groupId>
+		  <artifactId>maven-release-semver-policy</artifactId>
+		  <version>${project.version}</version>
+		  <optional>true</optional>
+	  </dependency>
 
     <dependency>
       <groupId>org.hamcrest</groupId>

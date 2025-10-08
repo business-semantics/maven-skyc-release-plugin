@@ -32,7 +32,7 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.apache.maven.release</groupId>
+		<groupId>com.smartkyc.maven.plugins</groupId>
       <artifactId>maven-release-api</artifactId>
       <version>@project.version@</version>
     </dependency>
